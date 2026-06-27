@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8">
-    <title>Malla Curricular — Ingeniería Física TEC</title>
+    <title>Malla Curricular - Ingeniería Física TEC</title>
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -91,6 +91,27 @@
       let svgControl = null;
       let svgToRowId = new Map();
       let rowToSvgIds = new Map();
+
+      function restoreAllEdges(svgDoc) {
+        const edges = svgDoc.querySelectorAll('.edge-requisito, .edge-correquisito');
+        edges.forEach(e => e.style.display = '');
+      }
+
+      function filterEdges(svgDoc, visibleSvgIds) {
+        const visibleSet = new Set(visibleSvgIds);
+        const edges = svgDoc.querySelectorAll('.edge-requisito, .edge-correquisito');
+        edges.forEach(edge => {
+          const id = edge.id; 
+          const parts = id.replace('edge-', '').split('-');
+          const nodeFrom = 'node-' + parts[0];
+          const nodeTo   = 'node-' + parts[1];
+          if (visibleSet.has(nodeFrom) && visibleSet.has(nodeTo)) {
+            edge.style.display = '';
+          } else {
+            edge.style.display = 'none';
+          }
+        });
+      }
 
       function loadDataFromSVG() {
         const svgObject = document.getElementById('svg-object');
@@ -194,8 +215,15 @@
             },
             onFilter: (filteredRows) => {
               if (!svgControl) return;
-              const visibleSvgIds = filteredRows.flatMap(row => rowToSvgIds.get(row._rowId) || []);
-              svgControl.filterByIds(visibleSvgIds);
+              const allVisible = filteredRows.length === data.length;
+              if (allVisible) {
+                svgControl.filterByIds([]);
+                restoreAllEdges(svgDoc);
+              } else {
+                const visibleSvgIds = filteredRows.flatMap(row => rowToSvgIds.get(row._rowId) || []);
+                svgControl.filterByIds(visibleSvgIds);
+                setTimeout(() => filterEdges(svgDoc, visibleSvgIds), 50);
+              }
             }
           });
 
