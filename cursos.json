@@ -1,0 +1,927 @@
+{
+  "nodos": [
+    {
+      "nombre": "Examen Diagnóstico",
+      "sigla": "CI0200",
+      "semestre": 0,
+      "creditos": 0,
+      "horas": 0,
+      "area": "Generales"
+    },
+    {
+      "nombre": "Inglés Básico",
+      "sigla": "CI0202",
+      "semestre": 0,
+      "creditos": 2,
+      "horas": 3,
+      "area": "Generales"
+    },
+    {
+      "nombre": "Comunicación Escrita",
+      "sigla": "CI1106",
+      "semestre": 1,
+      "creditos": 2,
+      "horas": 6,
+      "area": "Generales"
+    },
+    {
+      "nombre": "Inglés I",
+      "sigla": "CI1230",
+      "semestre": 1,
+      "creditos": 2,
+      "horas": 6,
+      "area": "Generales"
+    },
+    {
+      "nombre": "Introducción a la Ingeniería Física",
+      "sigla": "IF1101",
+      "semestre": 1,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Matemática General",
+      "sigla": "MA0101",
+      "semestre": 1,
+      "creditos": 2,
+      "horas": 5,
+      "area": "Matemáticas"
+    },
+    {
+      "nombre": "Laboratorio de Química Básica I",
+      "sigla": "QU1102",
+      "semestre": 1,
+      "creditos": 1,
+      "horas": 2,
+      "area": "Química"
+    },
+    {
+      "nombre": "Química Básica I",
+      "sigla": "QU1106",
+      "semestre": 1,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Química"
+    },
+    {
+      "nombre": "Actividad Cultural I",
+      "sigla": "SE1100",
+      "semestre": 1,
+      "creditos": 0,
+      "horas": 2,
+      "area": "Generales"
+    },
+    {
+      "nombre": "Actividad Deportiva I",
+      "sigla": "SE1200",
+      "semestre": 1,
+      "creditos": 0,
+      "horas": 2,
+      "area": "Generales"
+    },
+    {
+      "nombre": "Comunicación Oral",
+      "sigla": "CI1107",
+      "semestre": 2,
+      "creditos": 1,
+      "horas": 3,
+      "area": "Generales"
+    },
+    {
+      "nombre": "Inglés II",
+      "sigla": "CI1231",
+      "semestre": 2,
+      "creditos": 2,
+      "horas": 3,
+      "area": "Generales"
+    },
+    {
+      "nombre": "Ambiente Humano",
+      "sigla": "CS2101",
+      "semestre": 2,
+      "creditos": 2,
+      "horas": 6,
+      "area": "Generales"
+    },
+    {
+      "nombre": "Centros de Formación Humanística",
+      "sigla": "FH1000",
+      "semestre": 2,
+      "creditos": 0,
+      "horas": 2,
+      "area": "Generales"
+    },
+    {
+      "nombre": "Física General I",
+      "sigla": "FI1101",
+      "semestre": 2,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Física"
+    },
+    {
+      "nombre": "Laboratorio Física General I",
+      "sigla": "FI1201",
+      "semestre": 2,
+      "creditos": 1,
+      "horas": 2,
+      "area": "Física"
+    },
+    {
+      "nombre": "Cálculo Diferencial e Integral",
+      "sigla": "MA1102",
+      "semestre": 2,
+      "creditos": 4,
+      "horas": 5,
+      "area": "Matemáticas"
+    },
+    {
+      "nombre": "Laboratorio de Química Básica II",
+      "sigla": "QU1104",
+      "semestre": 2,
+      "creditos": 1,
+      "horas": 2,
+      "area": "Química"
+    },
+    {
+      "nombre": "Química Básica II",
+      "sigla": "QU1107",
+      "semestre": 2,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Química"
+    },
+    {
+      "nombre": "Elementos de Computación",
+      "sigla": "CA2125",
+      "semestre": 3,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Computación"
+    },
+    {
+      "nombre": "Física General II",
+      "sigla": "FI1102",
+      "semestre": 3,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Física"
+    },
+    {
+      "nombre": "Laboratorio Física General II",
+      "sigla": "FI1202",
+      "semestre": 3,
+      "creditos": 1,
+      "horas": 2,
+      "area": "Física"
+    },
+    {
+      "nombre": "Cálculo y Álgebra Lineal",
+      "sigla": "MA1103",
+      "semestre": 3,
+      "creditos": 4,
+      "horas": 4,
+      "area": "Matemáticas"
+    },
+    {
+      "nombre": "Dibujo Técnico",
+      "sigla": "MI2101",
+      "semestre": 3,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Electromecánica"
+    },
+    {
+      "nombre": "Estática",
+      "sigla": "MI2106",
+      "semestre": 3,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Electromecánica"
+    },
+    {
+      "nombre": "Actividad Cultural-deportiva",
+      "sigla": "SE1400",
+      "semestre": 3,
+      "creditos": 0,
+      "horas": 2,
+      "area": "Generales"
+    },
+    {
+      "nombre": "Física General III",
+      "sigla": "FI2103",
+      "semestre": 4,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Física"
+    },
+    {
+      "nombre": "Instrumentación I",
+      "sigla": "IF3502",
+      "semestre": 4,
+      "creditos": 1,
+      "horas": 5,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Ecuaciones Diferenciales",
+      "sigla": "MA2105",
+      "semestre": 4,
+      "creditos": 4,
+      "horas": 4,
+      "area": "Matemáticas"
+    },
+    {
+      "nombre": "Dinámica",
+      "sigla": "MI3117",
+      "semestre": 4,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Electromecánica"
+    },
+    {
+      "nombre": "Circuitos Eléctricos en CC y CA",
+      "sigla": "MT2001",
+      "semestre": 4,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Mecatronica"
+    },
+    {
+      "nombre": "Laboratorio de Circuitos de Corriente Continua y Corriente Alterna",
+      "sigla": "MT2002",
+      "semestre": 4,
+      "creditos": 1,
+      "horas": 2,
+      "area": "Mecatronica"
+    },
+    {
+      "nombre": "Probabilidad y Estadística I",
+      "sigla": "PI2610",
+      "semestre": 4,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Producción industrial"
+    },
+    {
+      "nombre": "Física General IV",
+      "sigla": "FI2104",
+      "semestre": 5,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Física"
+    },
+    {
+      "nombre": "Termodinámica I",
+      "sigla": "IF3501",
+      "semestre": 5,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Instrumentación II",
+      "sigla": "IF3503",
+      "semestre": 5,
+      "creditos": 1,
+      "horas": 2,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Cálculo Superior",
+      "sigla": "MA2104",
+      "semestre": 5,
+      "creditos": 4,
+      "horas": 4,
+      "area": "Matemáticas"
+    },
+    {
+      "nombre": "Métodos Numéricos",
+      "sigla": "MA3106",
+      "semestre": 5,
+      "creditos": 4,
+      "horas": 4,
+      "area": "Matemáticas"
+    },
+    {
+      "nombre": "Probabilidad y Estadística II",
+      "sigla": "PI3612",
+      "semestre": 5,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Producción industrial"
+    },
+    {
+      "nombre": "Metodología de la Investigación",
+      "sigla": "IF3601",
+      "semestre": 6,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Métodos Matemáticos de Física e Ingeniería I",
+      "sigla": "IF3602",
+      "semestre": 6,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Óptica",
+      "sigla": "IF3603",
+      "semestre": 6,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Laboratorio de Óptica",
+      "sigla": "IF3604",
+      "semestre": 6,
+      "creditos": 1,
+      "horas": 3,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Mecánica de Fluidos",
+      "sigla": "MI3108",
+      "semestre": 6,
+      "creditos": 4,
+      "horas": 4,
+      "area": "Electromecánica"
+    },
+    {
+      "nombre": "Diseño de Experimentos",
+      "sigla": "PI5302",
+      "semestre": 6,
+      "creditos": 4,
+      "horas": 4,
+      "area": "Producción industrial"
+    },
+    {
+      "nombre": "Seminario de Ética Para la Ingeniería",
+      "sigla": "CS3404",
+      "semestre": 7,
+      "creditos": 2,
+      "horas": 5,
+      "area": "Generales"
+    },
+    {
+      "nombre": "Teoría Electromagnética I",
+      "sigla": "EL4513",
+      "semestre": 7,
+      "creditos": 4,
+      "horas": 4,
+      "area": "Electrónica"
+    },
+    {
+      "nombre": "Métodos Matemáticos de Física e Ingeniería II",
+      "sigla": "IF4701",
+      "semestre": 7,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Física Computacional I",
+      "sigla": "IF4702",
+      "semestre": 7,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Análisis de Incertidumbres",
+      "sigla": "IF4703",
+      "semestre": 7,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Electiva I",
+      "sigla": "IF4704",
+      "semestre": 7,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Seminario de Estudios Costarricenses",
+      "sigla": "CS4402",
+      "semestre": 8,
+      "creditos": 2,
+      "horas": 3,
+      "area": "Generales"
+    },
+    {
+      "nombre": "Mecánica Cuántica Para Ingeniería",
+      "sigla": "IF4801",
+      "semestre": 8,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Laboratorio Metrología I",
+      "sigla": "IF4802",
+      "semestre": 8,
+      "creditos": 2,
+      "horas": 6,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Metrología Industrial y Legal",
+      "sigla": "IF4803",
+      "semestre": 8,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Física Computacional II",
+      "sigla": "IF4804",
+      "semestre": 8,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Análisis y Simulación de Sistemas",
+      "sigla": "MT7001",
+      "semestre": 8,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Mecatronica"
+    },
+    {
+      "nombre": "Física Experimental",
+      "sigla": "IF5901",
+      "semestre": 9,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Física Contemporánea",
+      "sigla": "IF5902",
+      "semestre": 9,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Metrología Científica",
+      "sigla": "IF5903",
+      "semestre": 9,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Electiva II",
+      "sigla": "IF5904",
+      "semestre": 9,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Física de la Materia Condensada",
+      "sigla": "IF5905",
+      "semestre": 9,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Energía y Sus Transformaciones",
+      "sigla": "IF5906",
+      "semestre": 9,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Desarrollo de Emprendedores",
+      "sigla": "AE4208",
+      "semestre": 10,
+      "creditos": 4,
+      "horas": 12,
+      "area": "Administración"
+    },
+    {
+      "nombre": "Ingeniería Económica",
+      "sigla": "AE5121",
+      "semestre": 10,
+      "creditos": 3,
+      "horas": 3,
+      "area": "Administración"
+    },
+    {
+      "nombre": "Trabajo Final de Graduación",
+      "sigla": "IF5108",
+      "semestre": 10,
+      "creditos": 8,
+      "horas": 24,
+      "area": "Ingeniería física"
+    },
+    {
+      "nombre": "Administración de Proyectos",
+      "sigla": "PI4802",
+      "semestre": 10,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Producción industrial"
+    }
+  ],
+  "enlaces": [
+    {
+      "fuente": "CI0200",
+      "destino": "CI1230",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CI0202",
+      "destino": "CI1230",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "QU1106",
+      "destino": "QU1102",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "QU1102",
+      "destino": "QU1106",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "CI1106",
+      "destino": "CI1107",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CI1230",
+      "destino": "CI1231",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CI1106",
+      "destino": "CS2101",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF1101",
+      "destino": "CS2101",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MA1102",
+      "destino": "FI1101",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "FI1101",
+      "destino": "FI1201",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "MA0101",
+      "destino": "MA1102",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "QU1102",
+      "destino": "QU1104",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "QU1106",
+      "destino": "QU1104",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "QU1107",
+      "destino": "QU1104",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "QU1102",
+      "destino": "QU1107",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "QU1106",
+      "destino": "QU1107",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "QU1104",
+      "destino": "QU1107",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "FI1101",
+      "destino": "FI1102",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MA1102",
+      "destino": "FI1102",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "FI1201",
+      "destino": "FI1202",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "FI1102",
+      "destino": "FI1202",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "MA1102",
+      "destino": "MA1103",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MA0101",
+      "destino": "MI2101",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "FI1101",
+      "destino": "MI2106",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "FI1101",
+      "destino": "FI2103",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MA1102",
+      "destino": "FI2103",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MT2001",
+      "destino": "IF3502",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "MT2002",
+      "destino": "IF3502",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "MA1103",
+      "destino": "MA2105",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MI2106",
+      "destino": "MI3117",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "FI1102",
+      "destino": "MT2001",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MA1102",
+      "destino": "MT2002",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MT2001",
+      "destino": "MT2002",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "MA1102",
+      "destino": "PI2610",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CA2125",
+      "destino": "PI2610",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "FI1102",
+      "destino": "FI2104",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MA2104",
+      "destino": "FI2104",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "FI2103",
+      "destino": "IF3501",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF3502",
+      "destino": "IF3503",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MA1103",
+      "destino": "MA2104",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MA2105",
+      "destino": "MA3106",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MA1103",
+      "destino": "PI3612",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "PI2610",
+      "destino": "PI3612",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "PI3612",
+      "destino": "IF3601",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MA2105",
+      "destino": "IF3602",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF3603",
+      "destino": "IF3602",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "FI2104",
+      "destino": "IF3603",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF3604",
+      "destino": "IF3603",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "IF3603",
+      "destino": "IF3604",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "MA2105",
+      "destino": "MI3108",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MI3117",
+      "destino": "MI3108",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "PI3612",
+      "destino": "PI5302",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF1101",
+      "destino": "CS3404",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "FI1102",
+      "destino": "EL4513",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MA2105",
+      "destino": "EL4513",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF3602",
+      "destino": "IF4701",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MA3106",
+      "destino": "IF4702",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MI2101",
+      "destino": "IF4702",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "PI5302",
+      "destino": "IF4703",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CS3404",
+      "destino": "CS4402",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF3603",
+      "destino": "IF4801",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF4701",
+      "destino": "IF4801",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF4803",
+      "destino": "IF4802",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "IF4703",
+      "destino": "IF4803",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF4702",
+      "destino": "IF4804",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF4701",
+      "destino": "MT7001",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MA2105",
+      "destino": "MT7001",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF3503",
+      "destino": "IF5901",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF3604",
+      "destino": "IF5901",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "FI2104",
+      "destino": "IF5902",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF4803",
+      "destino": "IF5903",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF4801",
+      "destino": "IF5905",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF3501",
+      "destino": "IF5906",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF3601",
+      "destino": "AE4208",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF3601",
+      "destino": "AE5121",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF5905",
+      "destino": "IF5108",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "IF4804",
+      "destino": "PI4802",
+      "tipo": "requisito"
+    }
+  ]
+}

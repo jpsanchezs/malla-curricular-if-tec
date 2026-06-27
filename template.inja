@@ -1,0 +1,294 @@
+{# template de la malla curricular #}
+
+{# parametros de layout #}
+{% set sem_step = 130 %}
+{% set area_step = 95 %}
+{% set base_x = 40 %}            {# margen izquierdo reducido (ya no hay etiquetas de area) #}
+{% set top_offset = 100 %}       {# altura fija para la barra de semestres #}
+{% set base_y = top_offset + 90 %}  {# primera linea de area #}
+{% set area_padding = 40 %}      {# espacio dentro del area antes del primer nodo #}
+{% set node_offset_y = 40 %}     {# separacion vertical entre nodos en la misma celda #}
+{% set node_radius_base = 8 %}
+{% set node_radius_factor = 1.2 %}
+{% set legend_width = 240 %}     {# ancho reservado para la leyenda a la derecha #}
+
+{# extraer areas y semestres unicos #}
+{% set areas = [] %}
+{% set semestres = [] %}
+{% set horas_unicas = [] %}
+{% for n in nodos %}
+  {% if not contains(areas, n.area) %}
+    {% set areas = areas | append(n.area) %}
+  {% endif %}
+  {% if not contains(semestres, n.semestre) %}
+    {% set semestres = semestres | append(n.semestre) %}
+  {% endif %}
+  {% if not contains(horas_unicas, n.horas) %}
+    {% set horas_unicas = horas_unicas | append(n.horas) %}
+  {% endif %}
+{% endfor %}
+
+{# calcular el maximo numero de nodos en una misma celda (semestre+area) #}
+{% set max_nodes = 0 %}
+{% for n1 in nodos %}
+  {% set count = 0 %}
+  {% for n2 in nodos %}
+    {% if n2.semestre == n1.semestre and n2.area == n1.area %}
+      {% set count = count + 1 %}
+    {% endif %}
+  {% endfor %}
+  {% if count > max_nodes %}
+    {% set max_nodes = count %}
+  {% endif %}
+{% endfor %}
+
+{# dimensiones del svg (se anade espacio para la leyenda) #}
+{% set svg_w = base_x + semestres | length * sem_step + legend_width + 50 %}
+{% set svg_h = base_y + areas | length * area_step + area_padding + max_nodes * node_offset_y + 80 %}
+
+{# paleta de colores para areas #}
+{% set palette_areas = ["#8ecae6","#219ebc","#ffb703","#fb8500","#90be6d","#f94144","#577590","#9b5de5","#43aa8b","#f8961e","#e76f51","#264653","#2a9d8f","#e9c46a","#f4a261"] %}
+{% set areaColor = scaleOrdinal() | domain(areas) | range(palette_areas) %}
+
+{# paleta de colores para horas (borde) #}
+{% set palette_horas = ["#b3d9ff", "#b3ffb3", "#ffffb3", "#d9b3ff", "#b3ffe0", "#ffccb3", "#cce0ff", "#b3ffcc", "#ffe6b3", "#d9d9ff"] %}
+{% set hourColor = scaleOrdinal() | domain(horas_unicas) | range(palette_horas) %}
+
+<svg width="{{svg_w}}" height="{{svg_h}}"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:v="https://odviz.org/1.0/">
+
+  <style>
+    .title { font-family: sans-serif; font-size: 20px; fill: #222; font-weight: 700; }
+    .axis-label { font-family: sans-serif; font-size: 13px; fill: #333; font-weight: 600; }
+    .node-label { font-family: sans-serif; font-size: 10px; fill: #111; pointer-events: none; }
+    .course-circle { stroke-width: 2.5; }
+    .edge-requisito { stroke: #aaaaaa; stroke-width: 2; fill: none; opacity: 0.7; }
+    .edge-correquisito { stroke: #e67e22; stroke-width: 2; fill: none; stroke-dasharray: 6,4; opacity: 0.7; }
+    .grid-line { stroke: #eaeaea; stroke-width: 1; }
+    .grid-label { font-family: sans-serif; font-size: 11px; fill: #999; }
+    .legend-text { font-family: sans-serif; font-size: 12px; fill: #333; }
+    .legend-swatch { stroke: #ccc; stroke-width: 0.5; }
+    .legend-title { font-family: sans-serif; font-size: 13px; fill: #333; font-weight: 700; }
+    .legend-line { fill: none; stroke-width: 2; }
+  </style>
+
+  <rect x="0" y="0" width="{{svg_w}}" height="{{svg_h}}" fill="#ffffff"/>
+  <text x="20" y="35" class="title">Plan de Estudios</text>
+
+  {# ===== eje de semestres ===== #}
+  {% for s in semestres %}
+    {% set idx = loop.index - 1 %}
+    {% set x = base_x + idx * sem_step %}
+    <line x1="{{x}}" y1="{{top_offset}}" x2="{{x}}" y2="{{base_y + areas | length * area_step + area_padding + max_nodes * node_offset_y + 20}}" class="grid-line"/>
+    <text x="{{x}}" y="{{top_offset - 10}}" class="grid-label" text-anchor="middle">Semestre {{s}}</text>
+  {% endfor %}
+
+  {# ===== leyenda de areas ===== #}
+  {% set legend_x = base_x + semestres | length * sem_step + 30 %}
+  {% set legend_y = 60 %}
+  <text x="{{legend_x}}" y="{{legend_y -15}}" class="legend-title">Áreas</text>
+  {% for a in areas %}
+    {% set idx = loop.index - 1 %}
+    {% set y = legend_y + 25 + idx * 22 %}
+    {% set color = scale(areaColor, a) %}
+    <rect x="{{legend_x}}" y="{{y - 8}}" width="14" height="14" fill="{{color}}" class="legend-swatch"/>
+    <text x="{{legend_x + 22}}" y="{{y + 2}}" class="legend-text">{{a}}</text>
+  {% endfor %}
+
+  {# ===== leyenda de tamano (creditos) ===== #}
+  {% set size_legend_y = legend_y + 25 + areas | length * 22 + 20 %}
+  <text x="{{legend_x}}" y="{{size_legend_y -20}}" class="legend-title">Créditos (tamaño)</text>
+  {% set creditos_ejemplo = [0, 1, 2, 3, 4] %}
+  {% for c in creditos_ejemplo %}
+    {% set idx = loop.index - 1 %}
+    {% set radius = node_radius_base + c * node_radius_factor %}
+    {% set y = size_legend_y + 25 + idx * 30 %}
+    <circle cx="{{legend_x + 7}}" cy="{{y}}" r="{{radius}}" fill="#888" stroke="#555" stroke-width="1.5"/>
+    <text x="{{legend_x + 22}}" y="{{y + 4}}" class="legend-text">{{c}} crédito{% if c > 1 %}s{% endif %}</text>
+  {% endfor %}
+
+  {# ===== leyenda de enlaces (requisitos y correquisitos) ===== #}
+  {% set edge_legend_y = size_legend_y + 50 + 3 * 30 + 20 %}
+  <text x="{{legend_x}}" y="{{edge_legend_y}}" class="legend-title">Enlaces</text>
+  {# requisito #}
+  {% set y1 = edge_legend_y + 25 %}
+  <line x1="{{legend_x}}" y1="{{y1}}" x2="{{legend_x + 30}}" y2="{{y1}}" class="legend-line edge-requisito"/>
+  <text x="{{legend_x + 38}}" y="{{y1 + 4}}" class="legend-text">Requisito</text>
+  {# correquisito #}
+  {% set y2 = y1 + 22 %}
+  <line x1="{{legend_x}}" y1="{{y2}}" x2="{{legend_x + 30}}" y2="{{y2}}" class="legend-line edge-correquisito"/>
+  <text x="{{legend_x + 38}}" y="{{y2 + 4}}" class="legend-text">Correquisito</text>
+
+  {# ===== leyenda de horas (color del borde) ===== #}
+  {% set hour_legend_y = edge_legend_y + 50 + 2 * 22 + 20 %}
+  <text x="{{legend_x}}" y="{{hour_legend_y -20}}" class="legend-title">Horas (borde)</text>
+  {% set horas_ejemplo = horas_unicas | sort %}
+  {% for h in horas_ejemplo %}
+    {% set idx = loop.index - 1 %}
+    {% set y = hour_legend_y + 25 + idx * 22 %}
+    {% set color = scale(hourColor, h) %}
+    <circle cx="{{legend_x + 7}}" cy="{{y}}" r="7" fill="white" stroke="{{color}}" stroke-width="2.5"/>
+    <text x="{{legend_x + 22}}" y="{{y + 4}}" class="legend-text">{{h}} h</text>
+  {% endfor %}
+
+{# ===== enlaces ===== #}
+{% for e in enlaces %}
+  {% set fx = 0 %}{% set fy = 0 %}{% set fok = false %}
+  {% for n in nodos %}
+    {% if n.sigla == e.fuente %}
+      {% set orden = 0 %}
+      {% set idx_actual = loop.index - 1 %}
+      {% for n2 in nodos %}
+        {% if n2.semestre == n.semestre and n2.area == n.area and loop.index - 1 < idx_actual %}
+          {% set orden = orden + 1 %}
+        {% endif %}
+      {% endfor %}
+      {% set idx_sem = 0 %}
+      {% for s in semestres %}
+        {% if s == n.semestre %}
+          {% set idx_sem = loop.index - 1 %}
+        {% endif %}
+      {% endfor %}
+      {% set idx_area = 0 %}
+      {% for a in areas %}
+        {% if a == n.area %}
+          {% set idx_area = loop.index - 1 %}
+        {% endif %}
+      {% endfor %}
+      {% set fx = base_x + idx_sem * sem_step %}
+      {% set fy = base_y + idx_area * area_step + area_padding + orden * node_offset_y %}
+      {% set fok = true %}
+    {% endif %}
+  {% endfor %}
+
+  {% set tx = 0 %}{% set ty = 0 %}{% set tok = false %}
+  {% for n in nodos %}
+    {% if n.sigla == e.destino %}
+      {% set orden = 0 %}
+      {% set idx_actual = loop.index - 1 %}
+      {% for n2 in nodos %}
+        {% if n2.semestre == n.semestre and n2.area == n.area and loop.index - 1 < idx_actual %}
+          {% set orden = orden + 1 %}
+        {% endif %}
+      {% endfor %}
+      {% set idx_sem = 0 %}
+      {% for s in semestres %}
+        {% if s == n.semestre %}
+          {% set idx_sem = loop.index - 1 %}
+        {% endif %}
+      {% endfor %}
+      {% set idx_area = 0 %}
+      {% for a in areas %}
+        {% if a == n.area %}
+          {% set idx_area = loop.index - 1 %}
+        {% endif %}
+      {% endfor %}
+      {% set tx = base_x + idx_sem * sem_step %}
+      {% set ty = base_y + idx_area * area_step + area_padding + orden * node_offset_y %}
+      {% set tok = true %}
+    {% endif %}
+  {% endfor %}
+
+  {% if fok and tok %}
+    {% set line_id = "edge-" + e.fuente + "-" + e.destino + "-" + e.tipo %}
+    <line id="{{line_id}}"
+          x1="{{fx}}" y1="{{fy}}"
+          x2="{{tx}}" y2="{{ty}}"
+          class="edge-{{e.tipo}}"/>
+  {% endif %}
+{% endfor %}
+
+
+
+
+  {# ===== nodos ===== #}
+  {% for n in nodos %}
+    {% set orden = 0 %}
+    {% set idx_actual = loop.index - 1 %}
+    {% for n2 in nodos %}
+      {% if n2.semestre == n.semestre and n2.area == n.area and loop.index - 1 < idx_actual %}
+        {% set orden = orden + 1 %}
+      {% endif %}
+    {% endfor %}
+
+    {% set idx_sem = 0 %}
+    {% for s in semestres %}
+      {% if s == n.semestre %}
+        {% set idx_sem = loop.index - 1 %}
+      {% endif %}
+    {% endfor %}
+    {% set idx_area = 0 %}
+    {% for a in areas %}
+      {% if a == n.area %}
+        {% set idx_area = loop.index - 1 %}
+      {% endif %}
+    {% endfor %}
+
+    {% set x = base_x + idx_sem * sem_step %}
+    {% set y = base_y + idx_area * area_step + area_padding + orden * node_offset_y %}
+
+    {% set radius = node_radius_base + n.creditos * node_radius_factor %}
+    {% set color_fill = scale(areaColor, n.area) %}
+    {% set color_stroke = scale(hourColor, n.horas) %}
+    {% set opacity = 0.6 + (n.horas / 24) * 0.4 %}
+    {% if opacity > 1 %}{% set opacity = 1 %}{% endif %}
+
+    <circle id="node-{{n.sigla}}" href="#{{n.sigla}}"
+            cx="{{x}}" cy="{{y}}"
+            r="{{radius}}"
+            fill="{{color_fill}}" fill-opacity="{{opacity}}"
+            stroke="{{color_stroke}}" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-{{n.sigla}}" href="#{{n.sigla}}"
+          x="{{x + radius + 5}}" y="{{y + 4}}"
+          class="node-label">{{n.sigla}}</text>
+  {% endfor %}
+
+  {# ===== odviz ===== #}
+  <metadata>
+  <v:table name="cursos"
+           description="Cursos de la malla curricular"
+           visualization="chart"
+           columns="id,nombre,sigla,semestre,creditos,horas,area,requisitos,correquisitos"
+           primaryKey="id">
+    {% for n in nodos %}
+      {% set requisitos = "" %}
+      {% set correquisitos = "" %}
+
+      {% for e in enlaces %}
+        {% if e.destino == n.sigla and e.tipo == "requisito" %}
+          {% if requisitos == "" %}
+            {% set requisitos = e.fuente %}
+          {% else %}
+            {% set requisitos = requisitos + " | " + e.fuente %}
+          {% endif %}
+        {% endif %}
+
+        {% if e.destino == n.sigla and e.tipo == "correquisito" %}
+          {% if correquisitos == "" %}
+            {% set correquisitos = e.fuente %}
+          {% else %}
+            {% set correquisitos = correquisitos + " | " + e.fuente %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {% if requisitos == "" %}
+        {% set requisitos = "-" %}
+      {% endif %}
+
+      {% if correquisitos == "" %}
+        {% set correquisitos = "-" %}
+      {% endif %}
+
+      <v:row id="{{n.sigla}}"
+             hrefs="node-{{n.sigla}},label-{{n.sigla}}">
+        {{n.sigla}},{{n.nombre}},{{n.sigla}},{{n.semestre}},{{n.creditos}},{{n.horas}},{{n.area}},{{requisitos}},{{correquisitos}}
+      </v:row>
+    {% endfor %}
+  </v:table>
+</metadata>
+
+  </svg>

@@ -1,0 +1,7158 @@
+
+
+
+
+
+
+
+<svg width="1760" height="1595"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:v="https://odviz.org/1.0/">
+
+  <style>
+    .title { font-family: sans-serif; font-size: 20px; fill: #222; font-weight: 700; }
+    .axis-label { font-family: sans-serif; font-size: 13px; fill: #333; font-weight: 600; }
+    .node-label { font-family: sans-serif; font-size: 10px; fill: #111; pointer-events: none; }
+    .course-circle { stroke-width: 2.5; }
+    .edge-requisito { stroke: #aaaaaa; stroke-width: 2; fill: none; opacity: 0.7; }
+    .edge-correquisito { stroke: #e67e22; stroke-width: 2; fill: none; stroke-dasharray: 6,4; opacity: 0.7; }
+    .grid-line { stroke: #eaeaea; stroke-width: 1; }
+    .grid-label { font-family: sans-serif; font-size: 11px; fill: #999; }
+    .legend-text { font-family: sans-serif; font-size: 12px; fill: #333; }
+    .legend-swatch { stroke: #ccc; stroke-width: 0.5; }
+    .legend-title { font-family: sans-serif; font-size: 13px; fill: #333; font-weight: 700; }
+    .legend-line { fill: none; stroke-width: 2; }
+  </style>
+
+  <rect x="0" y="0" width="1760" height="1595" fill="#ffffff"/>
+  <text x="20" y="35" class="title">Plan de Estudios</text>
+
+    <line x1="-90" y1="100" x2="-90" y2="1535" class="grid-line"/>
+    <text x="-90" y="90" class="grid-label" text-anchor="middle">Semestre 0</text>
+    <line x1="40" y1="100" x2="40" y2="1535" class="grid-line"/>
+    <text x="40" y="90" class="grid-label" text-anchor="middle">Semestre 1</text>
+    <line x1="170" y1="100" x2="170" y2="1535" class="grid-line"/>
+    <text x="170" y="90" class="grid-label" text-anchor="middle">Semestre 2</text>
+    <line x1="300" y1="100" x2="300" y2="1535" class="grid-line"/>
+    <text x="300" y="90" class="grid-label" text-anchor="middle">Semestre 3</text>
+    <line x1="430" y1="100" x2="430" y2="1535" class="grid-line"/>
+    <text x="430" y="90" class="grid-label" text-anchor="middle">Semestre 4</text>
+    <line x1="560" y1="100" x2="560" y2="1535" class="grid-line"/>
+    <text x="560" y="90" class="grid-label" text-anchor="middle">Semestre 5</text>
+    <line x1="690" y1="100" x2="690" y2="1535" class="grid-line"/>
+    <text x="690" y="90" class="grid-label" text-anchor="middle">Semestre 6</text>
+    <line x1="820" y1="100" x2="820" y2="1535" class="grid-line"/>
+    <text x="820" y="90" class="grid-label" text-anchor="middle">Semestre 7</text>
+    <line x1="950" y1="100" x2="950" y2="1535" class="grid-line"/>
+    <text x="950" y="90" class="grid-label" text-anchor="middle">Semestre 8</text>
+    <line x1="1080" y1="100" x2="1080" y2="1535" class="grid-line"/>
+    <text x="1080" y="90" class="grid-label" text-anchor="middle">Semestre 9</text>
+    <line x1="1210" y1="100" x2="1210" y2="1535" class="grid-line"/>
+    <text x="1210" y="90" class="grid-label" text-anchor="middle">Semestre 10</text>
+
+  <text x="1500" y="45" class="legend-title">Áreas</text>
+    <rect x="1500" y="55" width="14" height="14" fill="#8ecae6" class="legend-swatch"/>
+    <text x="1522" y="65" class="legend-text">Generales</text>
+    <rect x="1500" y="77" width="14" height="14" fill="#219ebc" class="legend-swatch"/>
+    <text x="1522" y="87" class="legend-text">Ingeniería física</text>
+    <rect x="1500" y="99" width="14" height="14" fill="#ffb703" class="legend-swatch"/>
+    <text x="1522" y="109" class="legend-text">Matemáticas</text>
+    <rect x="1500" y="121" width="14" height="14" fill="#fb8500" class="legend-swatch"/>
+    <text x="1522" y="131" class="legend-text">Química</text>
+    <rect x="1500" y="143" width="14" height="14" fill="#90be6d" class="legend-swatch"/>
+    <text x="1522" y="153" class="legend-text">Física</text>
+    <rect x="1500" y="165" width="14" height="14" fill="#f94144" class="legend-swatch"/>
+    <text x="1522" y="175" class="legend-text">Computación</text>
+    <rect x="1500" y="187" width="14" height="14" fill="#577590" class="legend-swatch"/>
+    <text x="1522" y="197" class="legend-text">Electromecánica</text>
+    <rect x="1500" y="209" width="14" height="14" fill="#9b5de5" class="legend-swatch"/>
+    <text x="1522" y="219" class="legend-text">Mecatronica</text>
+    <rect x="1500" y="231" width="14" height="14" fill="#43aa8b" class="legend-swatch"/>
+    <text x="1522" y="241" class="legend-text">Producción industrial</text>
+    <rect x="1500" y="253" width="14" height="14" fill="#f8961e" class="legend-swatch"/>
+    <text x="1522" y="263" class="legend-text">Electrónica</text>
+    <rect x="1500" y="275" width="14" height="14" fill="#e76f51" class="legend-swatch"/>
+    <text x="1522" y="285" class="legend-text">Administración</text>
+
+  <text x="1500" y="327" class="legend-title">Créditos (tamaño)</text>
+    <circle cx="1507" cy="342" r="8.0" fill="#888" stroke="#555" stroke-width="1.5"/>
+    <text x="1522" y="346" class="legend-text">0 crédito</text>
+    <circle cx="1507" cy="372" r="9.2" fill="#888" stroke="#555" stroke-width="1.5"/>
+    <text x="1522" y="376" class="legend-text">1 crédito</text>
+    <circle cx="1507" cy="402" r="10.4" fill="#888" stroke="#555" stroke-width="1.5"/>
+    <text x="1522" y="406" class="legend-text">2 créditos</text>
+    <circle cx="1507" cy="432" r="11.6" fill="#888" stroke="#555" stroke-width="1.5"/>
+    <text x="1522" y="436" class="legend-text">3 créditos</text>
+    <circle cx="1507" cy="462" r="12.8" fill="#888" stroke="#555" stroke-width="1.5"/>
+    <text x="1522" y="466" class="legend-text">4 créditos</text>
+
+  <text x="1500" y="507" class="legend-title">Enlaces</text>
+  <line x1="1500" y1="532" x2="1530" y2="532" class="legend-line edge-requisito"/>
+  <text x="1538" y="536" class="legend-text">Requisito</text>
+  <line x1="1500" y1="554" x2="1530" y2="554" class="legend-line edge-correquisito"/>
+  <text x="1538" y="558" class="legend-text">Correquisito</text>
+
+  <text x="1500" y="601" class="legend-title">Horas (borde)</text>
+    <circle cx="1507" cy="624" r="7" fill="white" stroke="#b3d9ff" stroke-width="2.5"/>
+    <text x="1522" y="628" class="legend-text">0 h</text>
+    <circle cx="1507" cy="646" r="7" fill="white" stroke="#ffccb3" stroke-width="2.5"/>
+    <text x="1522" y="650" class="legend-text">2 h</text>
+    <circle cx="1507" cy="668" r="7" fill="white" stroke="#b3ffb3" stroke-width="2.5"/>
+    <text x="1522" y="672" class="legend-text">3 h</text>
+    <circle cx="1507" cy="690" r="7" fill="white" stroke="#cce0ff" stroke-width="2.5"/>
+    <text x="1522" y="694" class="legend-text">4 h</text>
+    <circle cx="1507" cy="712" r="7" fill="white" stroke="#b3ffe0" stroke-width="2.5"/>
+    <text x="1522" y="716" class="legend-text">5 h</text>
+    <circle cx="1507" cy="734" r="7" fill="white" stroke="#ffffb3" stroke-width="2.5"/>
+    <text x="1522" y="738" class="legend-text">6 h</text>
+    <circle cx="1507" cy="756" r="7" fill="white" stroke="#d9b3ff" stroke-width="2.5"/>
+    <text x="1522" y="760" class="legend-text">9 h</text>
+    <circle cx="1507" cy="778" r="7" fill="white" stroke="#b3ffcc" stroke-width="2.5"/>
+    <text x="1522" y="782" class="legend-text">12 h</text>
+    <circle cx="1507" cy="800" r="7" fill="white" stroke="#ffe6b3" stroke-width="2.5"/>
+    <text x="1522" y="804" class="legend-text">24 h</text>
+
+
+
+    <line id="edge-CI0200-CI1230-requisito"
+          x1="-90" y1="135"
+          x2="40" y2="175"
+          class="edge-requisito"/>
+
+
+    <line id="edge-CI0202-CI1230-requisito"
+          x1="-90" y1="175"
+          x2="40" y2="175"
+          class="edge-requisito"/>
+
+
+    <line id="edge-QU1106-QU1102-correquisito"
+          x1="40" y1="460"
+          x2="40" y2="420"
+          class="edge-correquisito"/>
+
+
+    <line id="edge-QU1102-QU1106-correquisito"
+          x1="40" y1="420"
+          x2="40" y2="460"
+          class="edge-correquisito"/>
+
+
+    <line id="edge-CI1106-CI1107-requisito"
+          x1="40" y1="135"
+          x2="170" y2="135"
+          class="edge-requisito"/>
+
+
+    <line id="edge-CI1230-CI1231-requisito"
+          x1="40" y1="175"
+          x2="170" y2="175"
+          class="edge-requisito"/>
+
+
+    <line id="edge-CI1106-CS2101-requisito"
+          x1="40" y1="135"
+          x2="170" y2="215"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF1101-CS2101-requisito"
+          x1="40" y1="230"
+          x2="170" y2="215"
+          class="edge-requisito"/>
+
+
+    <line id="edge-MA1102-FI1101-correquisito"
+          x1="170" y1="325"
+          x2="170" y2="515"
+          class="edge-correquisito"/>
+
+
+    <line id="edge-FI1101-FI1201-correquisito"
+          x1="170" y1="515"
+          x2="170" y2="555"
+          class="edge-correquisito"/>
+
+
+    <line id="edge-MA0101-MA1102-requisito"
+          x1="40" y1="325"
+          x2="170" y2="325"
+          class="edge-requisito"/>
+
+
+    <line id="edge-QU1102-QU1104-requisito"
+          x1="40" y1="420"
+          x2="170" y2="420"
+          class="edge-requisito"/>
+
+
+    <line id="edge-QU1106-QU1104-requisito"
+          x1="40" y1="460"
+          x2="170" y2="420"
+          class="edge-requisito"/>
+
+
+    <line id="edge-QU1107-QU1104-correquisito"
+          x1="170" y1="460"
+          x2="170" y2="420"
+          class="edge-correquisito"/>
+
+
+    <line id="edge-QU1102-QU1107-requisito"
+          x1="40" y1="420"
+          x2="170" y2="460"
+          class="edge-requisito"/>
+
+
+    <line id="edge-QU1106-QU1107-requisito"
+          x1="40" y1="460"
+          x2="170" y2="460"
+          class="edge-requisito"/>
+
+
+    <line id="edge-QU1104-QU1107-correquisito"
+          x1="170" y1="420"
+          x2="170" y2="460"
+          class="edge-correquisito"/>
+
+
+    <line id="edge-FI1101-FI1102-requisito"
+          x1="170" y1="515"
+          x2="300" y2="515"
+          class="edge-requisito"/>
+
+
+    <line id="edge-MA1102-FI1102-requisito"
+          x1="170" y1="325"
+          x2="300" y2="515"
+          class="edge-requisito"/>
+
+
+    <line id="edge-FI1201-FI1202-requisito"
+          x1="170" y1="555"
+          x2="300" y2="555"
+          class="edge-requisito"/>
+
+
+    <line id="edge-FI1102-FI1202-correquisito"
+          x1="300" y1="515"
+          x2="300" y2="555"
+          class="edge-correquisito"/>
+
+
+    <line id="edge-MA1102-MA1103-requisito"
+          x1="170" y1="325"
+          x2="300" y2="325"
+          class="edge-requisito"/>
+
+
+    <line id="edge-MA0101-MI2101-requisito"
+          x1="40" y1="325"
+          x2="300" y2="705"
+          class="edge-requisito"/>
+
+
+    <line id="edge-FI1101-MI2106-requisito"
+          x1="170" y1="515"
+          x2="300" y2="745"
+          class="edge-requisito"/>
+
+
+    <line id="edge-FI1101-FI2103-requisito"
+          x1="170" y1="515"
+          x2="430" y2="515"
+          class="edge-requisito"/>
+
+
+    <line id="edge-MA1102-FI2103-requisito"
+          x1="170" y1="325"
+          x2="430" y2="515"
+          class="edge-requisito"/>
+
+
+    <line id="edge-MT2001-IF3502-correquisito"
+          x1="430" y1="800"
+          x2="430" y2="230"
+          class="edge-correquisito"/>
+
+
+    <line id="edge-MT2002-IF3502-correquisito"
+          x1="430" y1="840"
+          x2="430" y2="230"
+          class="edge-correquisito"/>
+
+
+    <line id="edge-MA1103-MA2105-requisito"
+          x1="300" y1="325"
+          x2="430" y2="325"
+          class="edge-requisito"/>
+
+
+    <line id="edge-MI2106-MI3117-requisito"
+          x1="300" y1="745"
+          x2="430" y2="705"
+          class="edge-requisito"/>
+
+
+    <line id="edge-FI1102-MT2001-requisito"
+          x1="300" y1="515"
+          x2="430" y2="800"
+          class="edge-requisito"/>
+
+
+    <line id="edge-MA1102-MT2002-requisito"
+          x1="170" y1="325"
+          x2="430" y2="840"
+          class="edge-requisito"/>
+
+
+    <line id="edge-MT2001-MT2002-correquisito"
+          x1="430" y1="800"
+          x2="430" y2="840"
+          class="edge-correquisito"/>
+
+
+    <line id="edge-MA1102-PI2610-requisito"
+          x1="170" y1="325"
+          x2="430" y2="895"
+          class="edge-requisito"/>
+
+
+    <line id="edge-CA2125-PI2610-correquisito"
+          x1="300" y1="610"
+          x2="430" y2="895"
+          class="edge-correquisito"/>
+
+
+    <line id="edge-FI1102-FI2104-requisito"
+          x1="300" y1="515"
+          x2="560" y2="515"
+          class="edge-requisito"/>
+
+
+    <line id="edge-MA2104-FI2104-correquisito"
+          x1="560" y1="325"
+          x2="560" y2="515"
+          class="edge-correquisito"/>
+
+
+    <line id="edge-FI2103-IF3501-requisito"
+          x1="430" y1="515"
+          x2="560" y2="230"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF3502-IF3503-requisito"
+          x1="430" y1="230"
+          x2="560" y2="270"
+          class="edge-requisito"/>
+
+
+    <line id="edge-MA1103-MA2104-requisito"
+          x1="300" y1="325"
+          x2="560" y2="325"
+          class="edge-requisito"/>
+
+
+    <line id="edge-MA2105-MA3106-requisito"
+          x1="430" y1="325"
+          x2="560" y2="365"
+          class="edge-requisito"/>
+
+
+    <line id="edge-MA1103-PI3612-requisito"
+          x1="300" y1="325"
+          x2="560" y2="895"
+          class="edge-requisito"/>
+
+
+    <line id="edge-PI2610-PI3612-requisito"
+          x1="430" y1="895"
+          x2="560" y2="895"
+          class="edge-requisito"/>
+
+
+    <line id="edge-PI3612-IF3601-requisito"
+          x1="560" y1="895"
+          x2="690" y2="230"
+          class="edge-requisito"/>
+
+
+    <line id="edge-MA2105-IF3602-requisito"
+          x1="430" y1="325"
+          x2="690" y2="270"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF3603-IF3602-correquisito"
+          x1="690" y1="310"
+          x2="690" y2="270"
+          class="edge-correquisito"/>
+
+
+    <line id="edge-FI2104-IF3603-requisito"
+          x1="560" y1="515"
+          x2="690" y2="310"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF3604-IF3603-correquisito"
+          x1="690" y1="350"
+          x2="690" y2="310"
+          class="edge-correquisito"/>
+
+
+    <line id="edge-IF3603-IF3604-correquisito"
+          x1="690" y1="310"
+          x2="690" y2="350"
+          class="edge-correquisito"/>
+
+
+    <line id="edge-MA2105-MI3108-requisito"
+          x1="430" y1="325"
+          x2="690" y2="705"
+          class="edge-requisito"/>
+
+
+    <line id="edge-MI3117-MI3108-requisito"
+          x1="430" y1="705"
+          x2="690" y2="705"
+          class="edge-requisito"/>
+
+
+    <line id="edge-PI3612-PI5302-requisito"
+          x1="560" y1="895"
+          x2="690" y2="895"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF1101-CS3404-requisito"
+          x1="40" y1="230"
+          x2="820" y2="135"
+          class="edge-requisito"/>
+
+
+    <line id="edge-FI1102-EL4513-requisito"
+          x1="300" y1="515"
+          x2="820" y2="990"
+          class="edge-requisito"/>
+
+
+    <line id="edge-MA2105-EL4513-requisito"
+          x1="430" y1="325"
+          x2="820" y2="990"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF3602-IF4701-requisito"
+          x1="690" y1="270"
+          x2="820" y2="230"
+          class="edge-requisito"/>
+
+
+    <line id="edge-MA3106-IF4702-requisito"
+          x1="560" y1="365"
+          x2="820" y2="270"
+          class="edge-requisito"/>
+
+
+    <line id="edge-MI2101-IF4702-requisito"
+          x1="300" y1="705"
+          x2="820" y2="270"
+          class="edge-requisito"/>
+
+
+    <line id="edge-PI5302-IF4703-requisito"
+          x1="690" y1="895"
+          x2="820" y2="310"
+          class="edge-requisito"/>
+
+
+    <line id="edge-CS3404-CS4402-requisito"
+          x1="820" y1="135"
+          x2="950" y2="135"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF3603-IF4801-requisito"
+          x1="690" y1="310"
+          x2="950" y2="230"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF4701-IF4801-requisito"
+          x1="820" y1="230"
+          x2="950" y2="230"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF4803-IF4802-correquisito"
+          x1="950" y1="310"
+          x2="950" y2="270"
+          class="edge-correquisito"/>
+
+
+    <line id="edge-IF4703-IF4803-requisito"
+          x1="820" y1="310"
+          x2="950" y2="310"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF4702-IF4804-requisito"
+          x1="820" y1="270"
+          x2="950" y2="350"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF4701-MT7001-requisito"
+          x1="820" y1="230"
+          x2="950" y2="800"
+          class="edge-requisito"/>
+
+
+    <line id="edge-MA2105-MT7001-requisito"
+          x1="430" y1="325"
+          x2="950" y2="800"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF3503-IF5901-requisito"
+          x1="560" y1="270"
+          x2="1080" y2="230"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF3604-IF5901-requisito"
+          x1="690" y1="350"
+          x2="1080" y2="230"
+          class="edge-requisito"/>
+
+
+    <line id="edge-FI2104-IF5902-requisito"
+          x1="560" y1="515"
+          x2="1080" y2="270"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF4803-IF5903-requisito"
+          x1="950" y1="310"
+          x2="1080" y2="310"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF4801-IF5905-requisito"
+          x1="950" y1="230"
+          x2="1080" y2="390"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF3501-IF5906-requisito"
+          x1="560" y1="230"
+          x2="1080" y2="430"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF3601-AE4208-requisito"
+          x1="690" y1="230"
+          x2="1210" y2="1085"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF3601-AE5121-requisito"
+          x1="690" y1="230"
+          x2="1210" y2="1125"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF5905-IF5108-requisito"
+          x1="1080" y1="390"
+          x2="1210" y2="230"
+          class="edge-requisito"/>
+
+
+    <line id="edge-IF4804-PI4802-requisito"
+          x1="950" y1="350"
+          x2="1210" y2="895"
+          class="edge-requisito"/>
+
+
+
+
+
+
+
+
+    <circle id="node-CI0200" href="#CI0200"
+            cx="-90" cy="135"
+            r="8.0"
+            fill="#8ecae6" fill-opacity="0.6"
+            stroke="#b3d9ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-CI0200" href="#CI0200"
+          x="-77.0" y="139"
+          class="node-label">CI0200</text>
+
+
+
+
+    <circle id="node-CI0202" href="#CI0202"
+            cx="-90" cy="175"
+            r="10.4"
+            fill="#8ecae6" fill-opacity="0.65"
+            stroke="#b3ffb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-CI0202" href="#CI0202"
+          x="-74.6" y="179"
+          class="node-label">CI0202</text>
+
+
+
+
+    <circle id="node-CI1106" href="#CI1106"
+            cx="40" cy="135"
+            r="10.4"
+            fill="#8ecae6" fill-opacity="0.7"
+            stroke="#ffffb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-CI1106" href="#CI1106"
+          x="55.4" y="139"
+          class="node-label">CI1106</text>
+
+
+
+
+    <circle id="node-CI1230" href="#CI1230"
+            cx="40" cy="175"
+            r="10.4"
+            fill="#8ecae6" fill-opacity="0.7"
+            stroke="#ffffb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-CI1230" href="#CI1230"
+          x="55.4" y="179"
+          class="node-label">CI1230</text>
+
+
+
+
+    <circle id="node-IF1101" href="#IF1101"
+            cx="40" cy="230"
+            r="11.6"
+            fill="#219ebc" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF1101" href="#IF1101"
+          x="56.6" y="234"
+          class="node-label">IF1101</text>
+
+
+
+
+    <circle id="node-MA0101" href="#MA0101"
+            cx="40" cy="325"
+            r="10.4"
+            fill="#ffb703" fill-opacity="0.6833333333333333"
+            stroke="#b3ffe0" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-MA0101" href="#MA0101"
+          x="55.4" y="329"
+          class="node-label">MA0101</text>
+
+
+
+
+    <circle id="node-QU1102" href="#QU1102"
+            cx="40" cy="420"
+            r="9.2"
+            fill="#fb8500" fill-opacity="0.6333333333333333"
+            stroke="#ffccb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-QU1102" href="#QU1102"
+          x="54.2" y="424"
+          class="node-label">QU1102</text>
+
+
+
+
+    <circle id="node-QU1106" href="#QU1106"
+            cx="40" cy="460"
+            r="11.6"
+            fill="#fb8500" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-QU1106" href="#QU1106"
+          x="56.6" y="464"
+          class="node-label">QU1106</text>
+
+
+
+
+    <circle id="node-SE1100" href="#SE1100"
+            cx="40" cy="215"
+            r="8.0"
+            fill="#8ecae6" fill-opacity="0.6333333333333333"
+            stroke="#ffccb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-SE1100" href="#SE1100"
+          x="53.0" y="219"
+          class="node-label">SE1100</text>
+
+
+
+
+    <circle id="node-SE1200" href="#SE1200"
+            cx="40" cy="255"
+            r="8.0"
+            fill="#8ecae6" fill-opacity="0.6333333333333333"
+            stroke="#ffccb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-SE1200" href="#SE1200"
+          x="53.0" y="259"
+          class="node-label">SE1200</text>
+
+
+
+
+    <circle id="node-CI1107" href="#CI1107"
+            cx="170" cy="135"
+            r="9.2"
+            fill="#8ecae6" fill-opacity="0.65"
+            stroke="#b3ffb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-CI1107" href="#CI1107"
+          x="184.2" y="139"
+          class="node-label">CI1107</text>
+
+
+
+
+    <circle id="node-CI1231" href="#CI1231"
+            cx="170" cy="175"
+            r="10.4"
+            fill="#8ecae6" fill-opacity="0.65"
+            stroke="#b3ffb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-CI1231" href="#CI1231"
+          x="185.4" y="179"
+          class="node-label">CI1231</text>
+
+
+
+
+    <circle id="node-CS2101" href="#CS2101"
+            cx="170" cy="215"
+            r="10.4"
+            fill="#8ecae6" fill-opacity="0.7"
+            stroke="#ffffb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-CS2101" href="#CS2101"
+          x="185.4" y="219"
+          class="node-label">CS2101</text>
+
+
+
+
+    <circle id="node-FH1000" href="#FH1000"
+            cx="170" cy="255"
+            r="8.0"
+            fill="#8ecae6" fill-opacity="0.6333333333333333"
+            stroke="#ffccb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-FH1000" href="#FH1000"
+          x="183.0" y="259"
+          class="node-label">FH1000</text>
+
+
+
+
+    <circle id="node-FI1101" href="#FI1101"
+            cx="170" cy="515"
+            r="11.6"
+            fill="#90be6d" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-FI1101" href="#FI1101"
+          x="186.6" y="519"
+          class="node-label">FI1101</text>
+
+
+
+
+    <circle id="node-FI1201" href="#FI1201"
+            cx="170" cy="555"
+            r="9.2"
+            fill="#90be6d" fill-opacity="0.6333333333333333"
+            stroke="#ffccb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-FI1201" href="#FI1201"
+          x="184.2" y="559"
+          class="node-label">FI1201</text>
+
+
+
+
+    <circle id="node-MA1102" href="#MA1102"
+            cx="170" cy="325"
+            r="12.8"
+            fill="#ffb703" fill-opacity="0.6833333333333333"
+            stroke="#b3ffe0" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-MA1102" href="#MA1102"
+          x="187.8" y="329"
+          class="node-label">MA1102</text>
+
+
+
+
+    <circle id="node-QU1104" href="#QU1104"
+            cx="170" cy="420"
+            r="9.2"
+            fill="#fb8500" fill-opacity="0.6333333333333333"
+            stroke="#ffccb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-QU1104" href="#QU1104"
+          x="184.2" y="424"
+          class="node-label">QU1104</text>
+
+
+
+
+    <circle id="node-QU1107" href="#QU1107"
+            cx="170" cy="460"
+            r="11.6"
+            fill="#fb8500" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-QU1107" href="#QU1107"
+          x="186.6" y="464"
+          class="node-label">QU1107</text>
+
+
+
+
+    <circle id="node-CA2125" href="#CA2125"
+            cx="300" cy="610"
+            r="11.6"
+            fill="#f94144" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-CA2125" href="#CA2125"
+          x="316.6" y="614"
+          class="node-label">CA2125</text>
+
+
+
+
+    <circle id="node-FI1102" href="#FI1102"
+            cx="300" cy="515"
+            r="11.6"
+            fill="#90be6d" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-FI1102" href="#FI1102"
+          x="316.6" y="519"
+          class="node-label">FI1102</text>
+
+
+
+
+    <circle id="node-FI1202" href="#FI1202"
+            cx="300" cy="555"
+            r="9.2"
+            fill="#90be6d" fill-opacity="0.6333333333333333"
+            stroke="#ffccb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-FI1202" href="#FI1202"
+          x="314.2" y="559"
+          class="node-label">FI1202</text>
+
+
+
+
+    <circle id="node-MA1103" href="#MA1103"
+            cx="300" cy="325"
+            r="12.8"
+            fill="#ffb703" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-MA1103" href="#MA1103"
+          x="317.8" y="329"
+          class="node-label">MA1103</text>
+
+
+
+
+    <circle id="node-MI2101" href="#MI2101"
+            cx="300" cy="705"
+            r="11.6"
+            fill="#577590" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-MI2101" href="#MI2101"
+          x="316.6" y="709"
+          class="node-label">MI2101</text>
+
+
+
+
+    <circle id="node-MI2106" href="#MI2106"
+            cx="300" cy="745"
+            r="11.6"
+            fill="#577590" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-MI2106" href="#MI2106"
+          x="316.6" y="749"
+          class="node-label">MI2106</text>
+
+
+
+
+    <circle id="node-SE1400" href="#SE1400"
+            cx="300" cy="135"
+            r="8.0"
+            fill="#8ecae6" fill-opacity="0.6333333333333333"
+            stroke="#ffccb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-SE1400" href="#SE1400"
+          x="313.0" y="139"
+          class="node-label">SE1400</text>
+
+
+
+
+    <circle id="node-FI2103" href="#FI2103"
+            cx="430" cy="515"
+            r="11.6"
+            fill="#90be6d" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-FI2103" href="#FI2103"
+          x="446.6" y="519"
+          class="node-label">FI2103</text>
+
+
+
+
+    <circle id="node-IF3502" href="#IF3502"
+            cx="430" cy="230"
+            r="9.2"
+            fill="#219ebc" fill-opacity="0.6833333333333333"
+            stroke="#b3ffe0" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF3502" href="#IF3502"
+          x="444.2" y="234"
+          class="node-label">IF3502</text>
+
+
+
+
+    <circle id="node-MA2105" href="#MA2105"
+            cx="430" cy="325"
+            r="12.8"
+            fill="#ffb703" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-MA2105" href="#MA2105"
+          x="447.8" y="329"
+          class="node-label">MA2105</text>
+
+
+
+
+    <circle id="node-MI3117" href="#MI3117"
+            cx="430" cy="705"
+            r="11.6"
+            fill="#577590" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-MI3117" href="#MI3117"
+          x="446.6" y="709"
+          class="node-label">MI3117</text>
+
+
+
+
+    <circle id="node-MT2001" href="#MT2001"
+            cx="430" cy="800"
+            r="11.6"
+            fill="#9b5de5" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-MT2001" href="#MT2001"
+          x="446.6" y="804"
+          class="node-label">MT2001</text>
+
+
+
+
+    <circle id="node-MT2002" href="#MT2002"
+            cx="430" cy="840"
+            r="9.2"
+            fill="#9b5de5" fill-opacity="0.6333333333333333"
+            stroke="#ffccb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-MT2002" href="#MT2002"
+          x="444.2" y="844"
+          class="node-label">MT2002</text>
+
+
+
+
+    <circle id="node-PI2610" href="#PI2610"
+            cx="430" cy="895"
+            r="11.6"
+            fill="#43aa8b" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-PI2610" href="#PI2610"
+          x="446.6" y="899"
+          class="node-label">PI2610</text>
+
+
+
+
+    <circle id="node-FI2104" href="#FI2104"
+            cx="560" cy="515"
+            r="11.6"
+            fill="#90be6d" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-FI2104" href="#FI2104"
+          x="576.6" y="519"
+          class="node-label">FI2104</text>
+
+
+
+
+    <circle id="node-IF3501" href="#IF3501"
+            cx="560" cy="230"
+            r="11.6"
+            fill="#219ebc" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF3501" href="#IF3501"
+          x="576.6" y="234"
+          class="node-label">IF3501</text>
+
+
+
+
+    <circle id="node-IF3503" href="#IF3503"
+            cx="560" cy="270"
+            r="9.2"
+            fill="#219ebc" fill-opacity="0.6333333333333333"
+            stroke="#ffccb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF3503" href="#IF3503"
+          x="574.2" y="274"
+          class="node-label">IF3503</text>
+
+
+
+
+    <circle id="node-MA2104" href="#MA2104"
+            cx="560" cy="325"
+            r="12.8"
+            fill="#ffb703" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-MA2104" href="#MA2104"
+          x="577.8" y="329"
+          class="node-label">MA2104</text>
+
+
+
+
+    <circle id="node-MA3106" href="#MA3106"
+            cx="560" cy="365"
+            r="12.8"
+            fill="#ffb703" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-MA3106" href="#MA3106"
+          x="577.8" y="369"
+          class="node-label">MA3106</text>
+
+
+
+
+    <circle id="node-PI3612" href="#PI3612"
+            cx="560" cy="895"
+            r="11.6"
+            fill="#43aa8b" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-PI3612" href="#PI3612"
+          x="576.6" y="899"
+          class="node-label">PI3612</text>
+
+
+
+
+    <circle id="node-IF3601" href="#IF3601"
+            cx="690" cy="230"
+            r="11.6"
+            fill="#219ebc" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF3601" href="#IF3601"
+          x="706.6" y="234"
+          class="node-label">IF3601</text>
+
+
+
+
+    <circle id="node-IF3602" href="#IF3602"
+            cx="690" cy="270"
+            r="11.6"
+            fill="#219ebc" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF3602" href="#IF3602"
+          x="706.6" y="274"
+          class="node-label">IF3602</text>
+
+
+
+
+    <circle id="node-IF3603" href="#IF3603"
+            cx="690" cy="310"
+            r="11.6"
+            fill="#219ebc" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF3603" href="#IF3603"
+          x="706.6" y="314"
+          class="node-label">IF3603</text>
+
+
+
+
+    <circle id="node-IF3604" href="#IF3604"
+            cx="690" cy="350"
+            r="9.2"
+            fill="#219ebc" fill-opacity="0.65"
+            stroke="#b3ffb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF3604" href="#IF3604"
+          x="704.2" y="354"
+          class="node-label">IF3604</text>
+
+
+
+
+    <circle id="node-MI3108" href="#MI3108"
+            cx="690" cy="705"
+            r="12.8"
+            fill="#577590" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-MI3108" href="#MI3108"
+          x="707.8" y="709"
+          class="node-label">MI3108</text>
+
+
+
+
+    <circle id="node-PI5302" href="#PI5302"
+            cx="690" cy="895"
+            r="12.8"
+            fill="#43aa8b" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-PI5302" href="#PI5302"
+          x="707.8" y="899"
+          class="node-label">PI5302</text>
+
+
+
+
+    <circle id="node-CS3404" href="#CS3404"
+            cx="820" cy="135"
+            r="10.4"
+            fill="#8ecae6" fill-opacity="0.6833333333333333"
+            stroke="#b3ffe0" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-CS3404" href="#CS3404"
+          x="835.4" y="139"
+          class="node-label">CS3404</text>
+
+
+
+
+    <circle id="node-EL4513" href="#EL4513"
+            cx="820" cy="990"
+            r="12.8"
+            fill="#f8961e" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-EL4513" href="#EL4513"
+          x="837.8" y="994"
+          class="node-label">EL4513</text>
+
+
+
+
+    <circle id="node-IF4701" href="#IF4701"
+            cx="820" cy="230"
+            r="11.6"
+            fill="#219ebc" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF4701" href="#IF4701"
+          x="836.6" y="234"
+          class="node-label">IF4701</text>
+
+
+
+
+    <circle id="node-IF4702" href="#IF4702"
+            cx="820" cy="270"
+            r="11.6"
+            fill="#219ebc" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF4702" href="#IF4702"
+          x="836.6" y="274"
+          class="node-label">IF4702</text>
+
+
+
+
+    <circle id="node-IF4703" href="#IF4703"
+            cx="820" cy="310"
+            r="11.6"
+            fill="#219ebc" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF4703" href="#IF4703"
+          x="836.6" y="314"
+          class="node-label">IF4703</text>
+
+
+
+
+    <circle id="node-IF4704" href="#IF4704"
+            cx="820" cy="350"
+            r="11.6"
+            fill="#219ebc" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF4704" href="#IF4704"
+          x="836.6" y="354"
+          class="node-label">IF4704</text>
+
+
+
+
+    <circle id="node-CS4402" href="#CS4402"
+            cx="950" cy="135"
+            r="10.4"
+            fill="#8ecae6" fill-opacity="0.65"
+            stroke="#b3ffb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-CS4402" href="#CS4402"
+          x="965.4" y="139"
+          class="node-label">CS4402</text>
+
+
+
+
+    <circle id="node-IF4801" href="#IF4801"
+            cx="950" cy="230"
+            r="11.6"
+            fill="#219ebc" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF4801" href="#IF4801"
+          x="966.6" y="234"
+          class="node-label">IF4801</text>
+
+
+
+
+    <circle id="node-IF4802" href="#IF4802"
+            cx="950" cy="270"
+            r="10.4"
+            fill="#219ebc" fill-opacity="0.7"
+            stroke="#ffffb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF4802" href="#IF4802"
+          x="965.4" y="274"
+          class="node-label">IF4802</text>
+
+
+
+
+    <circle id="node-IF4803" href="#IF4803"
+            cx="950" cy="310"
+            r="11.6"
+            fill="#219ebc" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF4803" href="#IF4803"
+          x="966.6" y="314"
+          class="node-label">IF4803</text>
+
+
+
+
+    <circle id="node-IF4804" href="#IF4804"
+            cx="950" cy="350"
+            r="11.6"
+            fill="#219ebc" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF4804" href="#IF4804"
+          x="966.6" y="354"
+          class="node-label">IF4804</text>
+
+
+
+
+    <circle id="node-MT7001" href="#MT7001"
+            cx="950" cy="800"
+            r="11.6"
+            fill="#9b5de5" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-MT7001" href="#MT7001"
+          x="966.6" y="804"
+          class="node-label">MT7001</text>
+
+
+
+
+    <circle id="node-IF5901" href="#IF5901"
+            cx="1080" cy="230"
+            r="11.6"
+            fill="#219ebc" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF5901" href="#IF5901"
+          x="1096.6" y="234"
+          class="node-label">IF5901</text>
+
+
+
+
+    <circle id="node-IF5902" href="#IF5902"
+            cx="1080" cy="270"
+            r="11.6"
+            fill="#219ebc" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF5902" href="#IF5902"
+          x="1096.6" y="274"
+          class="node-label">IF5902</text>
+
+
+
+
+    <circle id="node-IF5903" href="#IF5903"
+            cx="1080" cy="310"
+            r="11.6"
+            fill="#219ebc" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF5903" href="#IF5903"
+          x="1096.6" y="314"
+          class="node-label">IF5903</text>
+
+
+
+
+    <circle id="node-IF5904" href="#IF5904"
+            cx="1080" cy="350"
+            r="11.6"
+            fill="#219ebc" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF5904" href="#IF5904"
+          x="1096.6" y="354"
+          class="node-label">IF5904</text>
+
+
+
+
+    <circle id="node-IF5905" href="#IF5905"
+            cx="1080" cy="390"
+            r="11.6"
+            fill="#219ebc" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF5905" href="#IF5905"
+          x="1096.6" y="394"
+          class="node-label">IF5905</text>
+
+
+
+
+    <circle id="node-IF5906" href="#IF5906"
+            cx="1080" cy="430"
+            r="11.6"
+            fill="#219ebc" fill-opacity="0.75"
+            stroke="#d9b3ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF5906" href="#IF5906"
+          x="1096.6" y="434"
+          class="node-label">IF5906</text>
+
+
+
+
+    <circle id="node-AE4208" href="#AE4208"
+            cx="1210" cy="1085"
+            r="12.8"
+            fill="#e76f51" fill-opacity="0.8"
+            stroke="#b3ffcc" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-AE4208" href="#AE4208"
+          x="1227.8" y="1089"
+          class="node-label">AE4208</text>
+
+
+
+
+    <circle id="node-AE5121" href="#AE5121"
+            cx="1210" cy="1125"
+            r="11.6"
+            fill="#e76f51" fill-opacity="0.65"
+            stroke="#b3ffb3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-AE5121" href="#AE5121"
+          x="1226.6" y="1129"
+          class="node-label">AE5121</text>
+
+
+
+
+    <circle id="node-IF5108" href="#IF5108"
+            cx="1210" cy="230"
+            r="17.6"
+            fill="#219ebc" fill-opacity="1.0"
+            stroke="#ffe6b3" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-IF5108" href="#IF5108"
+          x="1232.6" y="234"
+          class="node-label">IF5108</text>
+
+
+
+
+    <circle id="node-PI4802" href="#PI4802"
+            cx="1210" cy="895"
+            r="11.6"
+            fill="#43aa8b" fill-opacity="0.6666666666666666"
+            stroke="#cce0ff" stroke-width="2.5"
+            class="course-circle"/>
+    <text id="label-PI4802" href="#PI4802"
+          x="1226.6" y="899"
+          class="node-label">PI4802</text>
+
+  <metadata>
+  <v:table name="cursos"
+           description="Cursos de la malla curricular"
+           visualization="chart"
+           columns="id,nombre,sigla,semestre,creditos,horas,area,requisitos,correquisitos"
+           primaryKey="id">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="CI0200"
+             hrefs="node-CI0200,label-CI0200">
+        CI0200,Examen Diagnóstico,CI0200,0,0,0,Generales,-,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="CI0202"
+             hrefs="node-CI0202,label-CI0202">
+        CI0202,Inglés Básico,CI0202,0,2,3,Generales,-,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="CI1106"
+             hrefs="node-CI1106,label-CI1106">
+        CI1106,Comunicación Escrita,CI1106,1,2,6,Generales,-,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="CI1230"
+             hrefs="node-CI1230,label-CI1230">
+        CI1230,Inglés I,CI1230,1,2,6,Generales,CI0200 | CI0202,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF1101"
+             hrefs="node-IF1101,label-IF1101">
+        IF1101,Introducción a la Ingeniería Física,IF1101,1,3,9,Ingeniería física,-,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="MA0101"
+             hrefs="node-MA0101,label-MA0101">
+        MA0101,Matemática General,MA0101,1,2,5,Matemáticas,-,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="QU1102"
+             hrefs="node-QU1102,label-QU1102">
+        QU1102,Laboratorio de Química Básica I,QU1102,1,1,2,Química,-,QU1106
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="QU1106"
+             hrefs="node-QU1106,label-QU1106">
+        QU1106,Química Básica I,QU1106,1,3,4,Química,-,QU1102
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="SE1100"
+             hrefs="node-SE1100,label-SE1100">
+        SE1100,Actividad Cultural I,SE1100,1,0,2,Generales,-,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="SE1200"
+             hrefs="node-SE1200,label-SE1200">
+        SE1200,Actividad Deportiva I,SE1200,1,0,2,Generales,-,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="CI1107"
+             hrefs="node-CI1107,label-CI1107">
+        CI1107,Comunicación Oral,CI1107,2,1,3,Generales,CI1106,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="CI1231"
+             hrefs="node-CI1231,label-CI1231">
+        CI1231,Inglés II,CI1231,2,2,3,Generales,CI1230,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="CS2101"
+             hrefs="node-CS2101,label-CS2101">
+        CS2101,Ambiente Humano,CS2101,2,2,6,Generales,CI1106 | IF1101,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="FH1000"
+             hrefs="node-FH1000,label-FH1000">
+        FH1000,Centros de Formación Humanística,FH1000,2,0,2,Generales,-,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="FI1101"
+             hrefs="node-FI1101,label-FI1101">
+        FI1101,Física General I,FI1101,2,3,4,Física,-,MA1102
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="FI1201"
+             hrefs="node-FI1201,label-FI1201">
+        FI1201,Laboratorio Física General I,FI1201,2,1,2,Física,-,FI1101
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="MA1102"
+             hrefs="node-MA1102,label-MA1102">
+        MA1102,Cálculo Diferencial e Integral,MA1102,2,4,5,Matemáticas,MA0101,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="QU1104"
+             hrefs="node-QU1104,label-QU1104">
+        QU1104,Laboratorio de Química Básica II,QU1104,2,1,2,Química,QU1102 | QU1106,QU1107
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="QU1107"
+             hrefs="node-QU1107,label-QU1107">
+        QU1107,Química Básica II,QU1107,2,3,4,Química,QU1102 | QU1106,QU1104
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="CA2125"
+             hrefs="node-CA2125,label-CA2125">
+        CA2125,Elementos de Computación,CA2125,3,3,4,Computación,-,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="FI1102"
+             hrefs="node-FI1102,label-FI1102">
+        FI1102,Física General II,FI1102,3,3,4,Física,FI1101 | MA1102,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="FI1202"
+             hrefs="node-FI1202,label-FI1202">
+        FI1202,Laboratorio Física General II,FI1202,3,1,2,Física,FI1201,FI1102
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="MA1103"
+             hrefs="node-MA1103,label-MA1103">
+        MA1103,Cálculo y Álgebra Lineal,MA1103,3,4,4,Matemáticas,MA1102,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="MI2101"
+             hrefs="node-MI2101,label-MI2101">
+        MI2101,Dibujo Técnico,MI2101,3,3,9,Electromecánica,MA0101,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="MI2106"
+             hrefs="node-MI2106,label-MI2106">
+        MI2106,Estática,MI2106,3,3,4,Electromecánica,FI1101,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="SE1400"
+             hrefs="node-SE1400,label-SE1400">
+        SE1400,Actividad Cultural-deportiva,SE1400,3,0,2,Generales,-,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="FI2103"
+             hrefs="node-FI2103,label-FI2103">
+        FI2103,Física General III,FI2103,4,3,4,Física,FI1101 | MA1102,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF3502"
+             hrefs="node-IF3502,label-IF3502">
+        IF3502,Instrumentación I,IF3502,4,1,5,Ingeniería física,-,MT2001 | MT2002
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="MA2105"
+             hrefs="node-MA2105,label-MA2105">
+        MA2105,Ecuaciones Diferenciales,MA2105,4,4,4,Matemáticas,MA1103,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="MI3117"
+             hrefs="node-MI3117,label-MI3117">
+        MI3117,Dinámica,MI3117,4,3,4,Electromecánica,MI2106,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="MT2001"
+             hrefs="node-MT2001,label-MT2001">
+        MT2001,Circuitos Eléctricos en CC y CA,MT2001,4,3,4,Mecatronica,FI1102,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="MT2002"
+             hrefs="node-MT2002,label-MT2002">
+        MT2002,Laboratorio de Circuitos de Corriente Continua y Corriente Alterna,MT2002,4,1,2,Mecatronica,MA1102,MT2001
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="PI2610"
+             hrefs="node-PI2610,label-PI2610">
+        PI2610,Probabilidad y Estadística I,PI2610,4,3,4,Producción industrial,MA1102,CA2125
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="FI2104"
+             hrefs="node-FI2104,label-FI2104">
+        FI2104,Física General IV,FI2104,5,3,4,Física,FI1102,MA2104
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF3501"
+             hrefs="node-IF3501,label-IF3501">
+        IF3501,Termodinámica I,IF3501,5,3,9,Ingeniería física,FI2103,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF3503"
+             hrefs="node-IF3503,label-IF3503">
+        IF3503,Instrumentación II,IF3503,5,1,2,Ingeniería física,IF3502,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="MA2104"
+             hrefs="node-MA2104,label-MA2104">
+        MA2104,Cálculo Superior,MA2104,5,4,4,Matemáticas,MA1103,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="MA3106"
+             hrefs="node-MA3106,label-MA3106">
+        MA3106,Métodos Numéricos,MA3106,5,4,4,Matemáticas,MA2105,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="PI3612"
+             hrefs="node-PI3612,label-PI3612">
+        PI3612,Probabilidad y Estadística II,PI3612,5,3,9,Producción industrial,MA1103 | PI2610,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF3601"
+             hrefs="node-IF3601,label-IF3601">
+        IF3601,Metodología de la Investigación,IF3601,6,3,9,Ingeniería física,PI3612,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF3602"
+             hrefs="node-IF3602,label-IF3602">
+        IF3602,Métodos Matemáticos de Física e Ingeniería I,IF3602,6,3,9,Ingeniería física,MA2105,IF3603
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF3603"
+             hrefs="node-IF3603,label-IF3603">
+        IF3603,Óptica,IF3603,6,3,9,Ingeniería física,FI2104,IF3604
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF3604"
+             hrefs="node-IF3604,label-IF3604">
+        IF3604,Laboratorio de Óptica,IF3604,6,1,3,Ingeniería física,-,IF3603
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="MI3108"
+             hrefs="node-MI3108,label-MI3108">
+        MI3108,Mecánica de Fluidos,MI3108,6,4,4,Electromecánica,MA2105 | MI3117,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="PI5302"
+             hrefs="node-PI5302,label-PI5302">
+        PI5302,Diseño de Experimentos,PI5302,6,4,4,Producción industrial,PI3612,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="CS3404"
+             hrefs="node-CS3404,label-CS3404">
+        CS3404,Seminario de Ética Para la Ingeniería,CS3404,7,2,5,Generales,IF1101,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="EL4513"
+             hrefs="node-EL4513,label-EL4513">
+        EL4513,Teoría Electromagnética I,EL4513,7,4,4,Electrónica,FI1102 | MA2105,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF4701"
+             hrefs="node-IF4701,label-IF4701">
+        IF4701,Métodos Matemáticos de Física e Ingeniería II,IF4701,7,3,9,Ingeniería física,IF3602,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF4702"
+             hrefs="node-IF4702,label-IF4702">
+        IF4702,Física Computacional I,IF4702,7,3,9,Ingeniería física,MA3106 | MI2101,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF4703"
+             hrefs="node-IF4703,label-IF4703">
+        IF4703,Análisis de Incertidumbres,IF4703,7,3,9,Ingeniería física,PI5302,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF4704"
+             hrefs="node-IF4704,label-IF4704">
+        IF4704,Electiva I,IF4704,7,3,9,Ingeniería física,-,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="CS4402"
+             hrefs="node-CS4402,label-CS4402">
+        CS4402,Seminario de Estudios Costarricenses,CS4402,8,2,3,Generales,CS3404,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF4801"
+             hrefs="node-IF4801,label-IF4801">
+        IF4801,Mecánica Cuántica Para Ingeniería,IF4801,8,3,9,Ingeniería física,IF3603 | IF4701,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF4802"
+             hrefs="node-IF4802,label-IF4802">
+        IF4802,Laboratorio Metrología I,IF4802,8,2,6,Ingeniería física,-,IF4803
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF4803"
+             hrefs="node-IF4803,label-IF4803">
+        IF4803,Metrología Industrial y Legal,IF4803,8,3,9,Ingeniería física,IF4703,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF4804"
+             hrefs="node-IF4804,label-IF4804">
+        IF4804,Física Computacional II,IF4804,8,3,9,Ingeniería física,IF4702,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="MT7001"
+             hrefs="node-MT7001,label-MT7001">
+        MT7001,Análisis y Simulación de Sistemas,MT7001,8,3,4,Mecatronica,IF4701 | MA2105,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF5901"
+             hrefs="node-IF5901,label-IF5901">
+        IF5901,Física Experimental,IF5901,9,3,9,Ingeniería física,IF3503 | IF3604,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF5902"
+             hrefs="node-IF5902,label-IF5902">
+        IF5902,Física Contemporánea,IF5902,9,3,9,Ingeniería física,FI2104,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF5903"
+             hrefs="node-IF5903,label-IF5903">
+        IF5903,Metrología Científica,IF5903,9,3,9,Ingeniería física,IF4803,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF5904"
+             hrefs="node-IF5904,label-IF5904">
+        IF5904,Electiva II,IF5904,9,3,9,Ingeniería física,-,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF5905"
+             hrefs="node-IF5905,label-IF5905">
+        IF5905,Física de la Materia Condensada,IF5905,9,3,9,Ingeniería física,IF4801,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF5906"
+             hrefs="node-IF5906,label-IF5906">
+        IF5906,Energía y Sus Transformaciones,IF5906,9,3,9,Ingeniería física,IF3501,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="AE4208"
+             hrefs="node-AE4208,label-AE4208">
+        AE4208,Desarrollo de Emprendedores,AE4208,10,4,12,Administración,IF3601,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="AE5121"
+             hrefs="node-AE5121,label-AE5121">
+        AE5121,Ingeniería Económica,AE5121,10,3,3,Administración,IF3601,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="IF5108"
+             hrefs="node-IF5108,label-IF5108">
+        IF5108,Trabajo Final de Graduación,IF5108,10,8,24,Ingeniería física,IF5905,-
+      </v:row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <v:row id="PI4802"
+             hrefs="node-PI4802,label-PI4802">
+        PI4802,Administración de Proyectos,PI4802,10,3,4,Producción industrial,IF4804,-
+      </v:row>
+  </v:table>
+</metadata>
+
+  </svg>
